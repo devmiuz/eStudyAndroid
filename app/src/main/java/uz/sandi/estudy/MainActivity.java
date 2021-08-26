@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebChromeClient(new WebChromeClient());
         webView.loadUrl("https://estudy.iiau.uz/login/index.php");
 
-
-
         webView.setWebViewClient(webViewClient);
 
         homeRefresh.setOnRefreshListener(() -> {
