@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         webView = findViewById(R.id.webview);
         final SwipeRefreshLayout homeRefresh = findViewById(R.id.home_refresh);
 
-
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
