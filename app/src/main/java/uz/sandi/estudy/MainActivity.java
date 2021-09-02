@@ -50,10 +50,25 @@ public class MainActivity extends AppCompatActivity {
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
             view.loadUrl("javascript:window.onload=(function(){document.getElementById('username').value = '"+username+"'; document.getElementById('password').value = '"+password+"';})();");
+
+            view.loadUrl("javascript:window.onload=(function(){document.getElementsByClassName('btn btn-secondary')[0].click();})();");
+
             view.loadUrl("javascript:(function() {var z = document.getElementById('loginbtn').click(); })()");
             view.loadUrl("javascript:(function() {var z = document.getElementById('rememberusername').checked = true; })()");
-            view.loadUrl("javascript:(function() {var z = document.getElementById('single_button5f971a185783425').click(); })()");
-            view.loadUrl("javascript:(function() {var z = document.getElementsByClassName('btn btn-secondary')[0].click(); })()");
+
+//            view.loadUrl("javascript:(function() {var z = document.getElementsByClassName('btn btn-secondary')[0].onclick(); })()");
+
+            view.loadUrl("javascript:"
+                    + "var FunctionOne = function () {"
+                    + "  try{ alert(document.getElementsByClassName('btn btn-primary')[0].innerHTML);}catch(e){}"
+                    + "};");
+
+//            view.loadUrl("javascript:(function() {var z = document.getElementsByClassName('fa')[0].click(); })()");
+//
+//            view.loadUrl("javascript:function() {alert('hello') }");
+//
+//
+//            view.loadUrl("javascript:<script></script>");
         }
     };
 }
